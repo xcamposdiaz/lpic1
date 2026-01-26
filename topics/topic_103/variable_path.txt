@@ -1,0 +1,44 @@
+pue@debian-xavi:/usr/share/data$ fdisk -l /dev/vdb
+bash: fdisk: orden no encontrada
+pue@debian-xavi:/usr/share/data$ whereis fdisk
+fdisk: /usr/sbin/fdisk /usr/share/man/man8/fdisk.8.gz
+pue@debian-xavi:/usr/share/data$ /usr/sbin/fdisk -l /dev/vdb
+fdisk: no se puede abrir /dev/vdb: Permiso denegado
+pue@debian-xavi:/usr/share/data$ echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+pue@debian-xavi:/usr/share/data$ 
+pue@debian-xavi:/usr/share/data$ su 
+Contraseña: 
+root@debian-xavi:/usr/share/data# fdisk -l /dev/vdb
+bash: fdisk: orden no encontrada
+root@debian-xavi:/usr/share/data# echo $PATH
+/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+root@debian-xavi:/usr/share/data# exit
+exit
+pue@debian-xavi:/usr/share/data$ 
+pue@debian-xavi:/usr/share/data$ su -
+Contraseña: 
+root@debian-xavi:~# fdisk -l /dev/vdb
+Disco /dev/vdb: 10 GiB, 10737418240 bytes, 20971520 sectores
+Unidades: sectores de 1 * 512 = 512 bytes
+Tamaño de sector (lógico/físico): 512 bytes / 512 bytes
+Tamaño de E/S (mínimo/óptimo): 512 bytes / 512 bytes
+Tipo de etiqueta de disco: dos
+Identificador del disco: 0x000c3512
+
+Disposit.  Inicio Comienzo    Final Sectores Tamaño Id Tipo
+/dev/vdb1             2048 20971519 20969472    10G 83 Linux
+root@debian-xavi:~# echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+root@debian-xavi:~# cat /usr/share/data/PATH.txt 
+Cuando ejecutamos un comando, el sistema lo intenta buscar solo en algunos de los directorios 
+del arbol de directorios. En concreto, en los que hay definidos dentro de la variable PATH. 
+
+Si el comando que queremos ejecutar no se encuentra en alguna de estas ubicaciones el comando 
+se puede invocar con su ruta absoluta.
+
+Esta variable puede ser distinta en función del usuario con el que accedamos. Si queremos usar
+las variables de entorno de una cuenta, cuando iniciemos sesión debemos indicar la opción "-". 
+root@debian-xavi:~# exit
+cerrar sesión
+

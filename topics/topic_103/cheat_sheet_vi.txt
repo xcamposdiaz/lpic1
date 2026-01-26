@@ -1,0 +1,71 @@
+En caso de pánico:
+------------------
+Esc Esc Esc : q !
+
+
+
+NAVEGACION
+----------
+"Cursor Arrows"
+[N]h      --> desplzamiento izda
+[N]j      --> desplzamiento abajo
+[N]k      --> desplzamiento arriba
+[N]l      --> desplzamiento dcha
+[N]w      --> despl. entre palabras hacia la dcha
+[N]W      --> despl. entre espacios hacia la dcha
+[N]b      --> despl. entre palabras hacia la izda
+[N]B      --> despl. entre espacios hacia la izda
+0      --> inicio de línea
+^      --> inicio de línea
+$      --> fin de línea
+gg     --> ir a 1a línea 
+G      --> ir a última línea 
+[N]G   --> ir a la línea N 
+
+u      --> undo (deshacer) última operación
+
+d[N]d     --> cortar N líneas
+y[N]y     --> copiar N líneas
+d[N]w     --> cortar N palabras
+y[N]w     --> copiar N palabras
+
+P      --> pegar "clipboard" antes
+p      --> pegar "clipboard" a continuación
+
+INSERCION
+---------
+i      --> inserción de texto antes del cursor
+I      --> inserción de texto al inicio de línea
+a      --> inserción de texto despues del cursor
+A      --> inserción de texto al final de la línea 
+O      --> inserción de texto en nueva línea arriba
+o      --> inserción de texto en nueva línea abajo
+(Insert)
+
+EJECUCION
+---------
+:q              salir
+:q!             salir descartando cambios
+:w              guardar
+:w [PATH]       guardar como
+:x              guardar y salir
+ZZ		guardar y salir
+:set number     numerar líneas (regla)
+/pattern	busqueda de 'pattern' en sentido descendente
+?pattern	busqueda de 'pattern' en sentido ascendente
+  - n           siguiente coincidencia
+  - N           anterior coincidencia
+:[N]            ir a la línea N
+:s/pattern1/pattern2/        buscar pattern1 y reemplazar con pattern2 en la 1a coincidencia de la línea
+:s/pattern1/pattern2/g       buscar pattern1 y reemplazar con pattern2 en todas las coincidencia
+:N,Ms/pattern1/pattern2/g    buscar pattern1 y reemplazar con pattern2 en todas las coincidencia de las líneas entre N y M
+:1,$s/pattern1/pattern2/g    buscar pattern1 y reemplazar con pattern2 en todas las coincidencia de todo el documento
+:! COMMAND     escapar a shell y ejecutar un comando
+:r! COMMAND     escapar a shell y ejecutar un comando y el stdout se escribe en el fichero
+
+
+
+
+
+
+
