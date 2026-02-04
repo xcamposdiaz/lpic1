@@ -1,0 +1,64 @@
+    1  2026-02-04 18:44:33 su - root
+    2  2026-02-04 20:48:37 exit
+    3  2026-02-04 20:49:32 vi .bash_history 
+    4  2026-02-04 20:49:49 vi history-fdisk
+    5  2026-02-04 20:49:54 vi lpi.txt 
+    6  2026-02-04 21:11:26 view lpi.txt 
+    7  2026-02-04 21:12:01 vi lpi.txt 
+    8  2026-02-04 21:19:25 vi /etc/network/interfaces
+    9  2026-02-04 21:20:01 ls /home/vagrant/interfaces.save 
+   10  2026-02-04 21:20:53 vi lpi.txt 
+   11  2026-02-04 21:30:11 su - root
+   12  2026-02-04 21:33:16 vi lpi.txt 
+   13  2026-02-04 21:34:31 ip a 
+   14  2026-02-04 21:34:34 vi lpi.txt 
+   15  2026-02-04 21:45:59 vi lpic.txt 
+   16  2026-02-04 21:48:25 vi .vimrc 
+   17  2026-02-04 21:48:37 vi lpic.txt 
+   18  2026-02-04 21:48:54 ls -A 
+   19  2026-02-04 21:48:59 ls -lA .vimrc 
+   20  2026-02-04 21:49:17 cat .vimrc 
+   21  2026-02-04 21:49:29 su - root
+   22  2026-02-04 21:50:03 vi lpi.txt 
+   23  2026-02-04 21:52:33 vi /usr/local/bin/demo 
+   24  2026-02-04 21:54:07 vi index.html
+   25  2026-02-04 21:55:57 cat index.html 
+   26  2026-02-04 21:56:06 vi index.html 
+   27  2026-02-04 21:57:02 vi datos
+   28  2026-02-04 21:57:22 cp datos datos-radu
+   29  2026-02-04 21:57:25 cp datos datos-sergio
+   30  2026-02-04 21:57:31 vi datos-sergio
+   31  2026-02-04 21:57:51 vi datos-radu 
+   32  2026-02-04 21:58:49 vi datos-sergio 
+   33  2026-02-04 21:59:30 vi /etc/fstab 
+   34  2026-02-04 22:00:34 whereis vi
+   35  2026-02-04 22:00:40 whereis vim
+   36  2026-02-04 22:00:55 ls -l /usr/bin/vi
+   37  2026-02-04 22:01:01 ls -l /etc/alternatives/vi
+   38  2026-02-04 22:02:04 whereis vim 
+   39  2026-02-04 22:02:06 whereis vi 
+   40  2026-02-04 22:04:50 vi .vimrc 
+   41  2026-02-04 22:07:46 exit
+   42  2026-02-04 22:08:02 history-report 
+   39  fdisk -l 
+   40  fdisk -l /dev/sdb 
+   41  fdisk -l /dev/sdb 
+   42  blkid 
+   43  blkid 
+   44  mount /dev/sdb5 /mnt/
+   45  blkid 
+   46  lsblk 
+   47  mkfs -t ext3 /dev/sdb5 
+   48  mkfs.ext3 /dev/sdb6 
+   49  blkid 
+   50  mount /dev/sdb5 /mnt/
+   51  lsblk 
+   52  mkdir /usr/share/public
+   53  mount /dev/sdb6 /usr/share/public 
+   54  lsblk 
+   55  ls /usr/share/public
+   56  cd /dev/sdb6 
+   57  ls -l /dev/sdb6 
+   58  cd /usr/share/public
+   59  history 
+
