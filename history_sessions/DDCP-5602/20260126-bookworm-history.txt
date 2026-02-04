@@ -1,0 +1,772 @@
+VAGRANT HISTORY
+---------------
+    1  2026-01-21 18:25:20 ls -lA 
+    2  2026-01-21 18:25:46 history 
+    3  2026-01-21 18:26:14 free -h 
+    4  2026-01-21 18:26:16 date
+    5  2026-01-21 18:26:18 uptime
+    6  2026-01-21 18:26:24 free -h ; date 
+    7  2026-01-21 18:26:54 free -h && date 
+    8  2026-01-21 18:27:04 frre -h && date 
+    9  2026-01-21 18:27:32 free -h || date 
+   10  2026-01-21 18:27:49 frre -h || date 
+   11  2026-01-21 18:28:38 man wc 
+   12  2026-01-21 18:28:48 wc /etc/fstab 
+   13  2026-01-21 18:29:00 wc -l /etc/fstab  
+   14  2026-01-21 18:30:07 date || uptime 
+   15  2026-01-21 18:30:36 data || uptime 
+   16  2026-01-21 18:31:23 man truncate
+   17  2026-01-21 18:34:26 su - root 
+   18  2026-01-21 18:41:14 find / -name fstab 
+   19  2026-01-21 18:42:14 ls 
+   20  2026-01-21 18:42:32 find / -name fstab  1> match.txt    2> errors.txt    
+   21  2026-01-21 18:43:39 ls
+   22  2026-01-21 18:43:43 wc -l match.txt 
+   23  2026-01-21 18:43:48 wc -l errors.txt 
+   24  2026-01-21 18:43:55 cat match.txt 
+   25  2026-01-21 18:44:16 find / -name fstab    2> errors.txt    
+   26  2026-01-21 18:44:27 find / -name fstab  1> match2.txt  
+   27  2026-01-21 18:44:30 ls
+   28  2026-01-21 18:44:32 cat match2.txt 
+   29  2026-01-21 18:44:41 cp fstab /tmp/
+   30  2026-01-21 19:02:02 find / -name fstab  2> /dev/null 
+   31  2026-01-21 19:02:38 ls /dev/zero 
+   32  2026-01-21 19:09:35 vi database
+   33  2026-01-21 19:10:42 su - root
+   34  2026-01-21 19:17:58 find / -name fstab  > match.txt    2> errors.txt    
+   35  2026-01-21 19:19:13 find / -name fstab     
+   36  2026-01-21 19:19:49 find / -name fstab  > match.txt 
+   37  2026-01-21 19:19:58 cat match.txt 
+   38  2026-01-21 19:20:19 find / -name resolv.conf  > match.txt  2> errors.txt 
+   39  2026-01-21 19:20:23 cat match.txt 
+   40  2026-01-21 19:21:20 find / -name fstab >> match.txt  2>> errors.txt  
+   41  2026-01-21 19:21:22 cat match.txt 
+   42  2026-01-21 19:22:12 locate fstab 
+   43  2026-01-21 19:22:17 su - root
+   44  2026-01-21 19:22:58 find / -name fstab 2> errors.txt 
+   45  2026-01-21 19:23:15 locate fstab 
+   46  2026-01-21 19:23:18 su - root
+   47  2026-01-21 19:23:53 find / -name fstab 2> errors.txt 
+   48  2026-01-21 19:24:03 locate fstab 
+   49  2026-01-21 19:25:46 find / -name "*fstab*" 2> errors.txt 
+   50  2026-01-21 19:26:34 find / -name "*fstab*" 1> find.txt 2> errors.txt 
+   51  2026-01-21 19:26:43 locate fstab > locate.txt 
+   52  2026-01-21 19:26:48 ls -l 
+   53  2026-01-21 19:27:08 man diff 
+   54  2026-01-21 19:27:22 diff find.txt locate.txt 
+   55  2026-01-21 19:27:56 head find.txt 
+   56  2026-01-21 19:28:03 head locate.txt 
+   57  2026-01-21 19:28:19 sort find.txt 
+   58  2026-01-21 19:29:13 cat find.txt 
+   59  2026-01-21 19:29:57 sort find.txt > find-sort.txt 
+   60  2026-01-21 19:30:13 sort locate.txt > locate-sort.txt 
+   61  2026-01-21 19:30:24 diff find-sort.txt locate-sort.txt 
+   62  2026-01-21 19:30:35 paste find-sort.txt locate-sort.txt 
+   63  2026-01-21 19:30:52 wc -l find-sort.txt 
+   64  2026-01-21 19:30:58 wc -l locate-sort.txt 
+   65  2026-01-21 19:31:03 diff find-sort.txt locate-sort.txt 
+   66  2026-01-21 19:31:40 find / -name "*fstab*" 
+   67  2026-01-21 19:32:07 locate fstab 
+   68  2026-01-21 19:34:20 mkdir pruebas
+   69  2026-01-21 19:34:23 lcoate pruebas
+   70  2026-01-21 19:34:28 locate pruebas
+   71  2026-01-21 19:34:40 su - root
+   72  2026-01-21 19:34:52 locate pruebas
+   73  2026-01-21 19:35:02 locate fstab 
+   74  2026-01-21 19:35:21 ls /tmp/
+   75  2026-01-21 19:35:56 su - vagrant
+   76  2026-01-21 19:36:04 su - root
+   77  2026-01-21 19:39:47 sort find.txt > find.txt 
+   78  2026-01-21 19:39:51 cat find.txt 
+   79  2026-01-21 19:40:13 cat locate.txt 
+   80  2026-01-21 19:40:17 cat locate.txt | sort 
+   81  2026-01-21 19:40:24 cat locate.txt | sort > locate.txt 
+   82  2026-01-21 19:40:27 cat locate.txt 
+   83  2026-01-21 19:41:51 cat fstab | sort 
+   84  2026-01-21 19:42:15 sort fstab 
+   85  2026-01-21 19:42:41 ls 
+   86  2026-01-21 19:42:45 sort ls
+   87  2026-01-21 19:42:55 man sort 
+   88  2026-01-21 19:43:15 ls | sort 
+   89  2026-01-21 19:45:04 ip address show 
+   90  2026-01-21 19:45:31 alias grep="grep --color=auto"
+   91  2026-01-21 19:45:36 ip address show 
+   92  2026-01-21 19:45:44 ip address show | grep eth0 
+   93  2026-01-21 19:45:53 man grep 
+   94  2026-01-21 19:46:27 ip address show 
+   95  2026-01-21 19:46:29 ip address show | grep eth0 
+   96  2026-01-21 19:46:45 ip address show | grep eth0 | grep inet 
+   97  2026-01-21 19:49:46 ip address show | grep eth0 | grep inet | tr ' ' ';' 
+   98  2026-01-21 19:51:18 ip address show | grep eth0 | grep inet | tr ' ' ';' | cut -d';' -f6 
+   99  2026-01-21 19:51:29 ip address show 
+  100  2026-01-21 19:51:31 ip address show | grep eth0 | grep inet | tr ' ' ';' | cut -d';' -f6 
+  101  2026-01-21 19:52:07 alias mi_ip="ip address show | grep eth0 | grep inet | tr ' ' ';' | cut -d';' -f6 "
+  102  2026-01-21 19:52:09 mi_ip 
+  103  2026-01-21 19:52:52 alias mi_ip="ip address show | grep eth0 | grep inet | cut -d' ' -f6 " 
+  104  2026-01-21 19:52:53 mi_ip 
+  105  2026-01-21 19:53:15 alias mi_ip="ip address show | grep inet | cut -d' ' -f6 " 
+  106  2026-01-21 19:53:16 mi_ip 
+  107  2026-01-21 19:53:56 alias mi_ip="ip address show | grep inet 
+  108  2026-01-21 19:54:02 ip address show | grep inet 
+  109  2026-01-21 19:54:10 ip address show | grep -w inet 
+  110  2026-01-21 19:55:33 ip address show | grep -w inet | grep -v lo 
+  111  2026-01-21 19:56:02 ip address show | grep -w inet | grep -v "127"
+  112  2026-01-21 19:56:23 ip address show | grep -w inet | grep -v "lo$" 
+  113  2026-01-21 19:56:52 ip address show | grep -w inet | grep -vw lo 
+  114  2026-01-21 19:58:26 ip address show | grep -w inet | grep -vw lo | tr ' ' ';'  
+  115  2026-01-21 19:58:53 ip address show | grep -w inet | grep -vw lo | tr ' ' ';'  | cut -d';' -f6,11
+  116  2026-01-21 19:59:39 ip address show | grep -w inet | grep -vw lo | tr ' ' ';'  | cut -d';' -f6-
+  117  2026-01-21 20:00:10 ip address show 
+  118  2026-01-21 20:01:29 ip address show | grep inet
+  119  2026-01-21 20:01:42 ip address show | grep -B1 -w inet 
+  120  2026-01-21 20:02:37 ip address show 
+  121  2026-01-21 20:03:03 ip route show
+  122  2026-01-21 20:03:28 ip route show | cut -d" " -f3,9
+  123  2026-01-21 20:03:38 ip route show
+  124  2026-01-21 20:04:23 ip route show | grep -v default | grep -v "^169.254" | cut -d" " -f3,9
+  125  2026-01-21 20:36:37 man uniq
+  126  2026-01-21 20:37:03 vi colors
+  127  2026-01-21 20:37:21 cat colors 
+  128  2026-01-21 20:37:26 uniq colors 
+  129  2026-01-21 20:37:53 sort colors 
+  130  2026-01-21 20:37:56 sort colors | uniq 
+  131  2026-01-21 20:38:09 cat colors 
+  132  2026-01-21 20:38:45 sort colors > color-sorted
+  133  2026-01-21 20:38:49 uniq color-sorted 
+  134  2026-01-21 20:38:58 sort colors | uniq  
+  135  2026-01-21 20:39:03 sort colors | uniq  > color-sorted 
+  136  2026-01-21 20:42:19 man uniq 
+  137  2026-01-21 21:00:05 man cat 
+  138  2026-01-21 21:00:23 cat /etc/fstab /etc/resolv.conf /etc/network/interfaces
+  139  2026-01-21 21:00:37 cat /etc/fstab 
+  140  2026-01-21 21:09:40 tac colors
+  141  2026-01-21 21:09:45 cat colors 
+  142  2026-01-21 21:10:42 vi nums
+  143  2026-01-21 21:10:52 cat nums 
+  144  2026-01-21 21:10:55 tac nums 
+  145  2026-01-21 21:10:58 tail -3 nums 
+  146  2026-01-21 21:11:48 sudo apt install lolcat 
+  147  2026-01-21 21:12:19 vi nums 
+  148  2026-01-21 21:12:39 cat colors 
+  149  2026-01-21 21:12:43 cat nums 
+  150  2026-01-21 21:12:45 sort nums
+  151  2026-01-21 21:13:14 sort -n nums
+  152  2026-01-21 21:13:25 sort -nr nums
+  153  2026-01-21 21:13:32 sort -r nums
+  154  2026-01-21 21:13:49 vi users
+  155  2026-01-21 21:14:09 cat users 
+  156  2026-01-21 21:14:13 sort -R users 
+  157  2026-01-21 21:14:42 alias voluntario='sort -R users | head -1'
+  158  2026-01-21 21:14:48 voluntario 
+  159  2026-01-21 21:15:30 lolcat /etc/fstab 
+  160  2026-01-21 21:16:23 sudo apt install sl 
+  161  2026-01-21 21:16:57 ls
+  162  2026-01-21 21:17:03 sl 
+  163  2026-01-21 21:18:10 view /etc/fstab 
+  164  2026-01-21 21:19:43 vi users 
+  165  2026-01-21 21:20:04 vi colors 
+  166  2026-01-21 21:20:20 cat users colors 
+  167  2026-01-21 21:20:37 paste users colors 
+  168  2026-01-21 21:20:50 vi domain
+  169  2026-01-21 21:21:18 paste users domain 
+  170  2026-01-21 21:21:49 paste users domain | expand -t1 
+  171  2026-01-21 21:22:07 paste users domain | expand -t1 | tr ' ' '@' 
+  172  2026-01-21 21:22:20 cat users 
+  173  2026-01-21 21:22:22 cat domain 
+  174  2026-01-21 21:22:28 paste users domain | expand -t1 | tr ' ' '@' > mails
+  175  2026-01-21 21:22:30 cat mails 
+  176  2026-01-21 21:22:38 su - root
+  177  2026-01-21 21:22:51 pwgen -Bcn1
+  178  2026-01-21 21:22:56 pwgen -Bcn1 > pass
+  179  2026-01-21 21:23:00 pwgen -Bcn1 >> pass
+  180  2026-01-21 21:23:15 cat pass
+  181  2026-01-21 21:23:27 paste users pass mails 
+  182  2026-01-21 21:23:35 paste users pass mails | expand -t1 
+  183  2026-01-21 21:23:41 paste users pass mails | expand -t1 | tr ' ' ';' 
+  184  2026-01-21 21:23:52 paste users pass mails | expand -t1 | tr ' ' ';' > bulk-users.csv 
+  185  2026-01-21 21:23:55 ls
+  186  2026-01-21 21:24:30 vi domain 
+  187  2026-01-21 21:24:43 cat users 
+  188  2026-01-21 21:25:00 vi nombrs
+  189  2026-01-21 21:25:35 cat nombrs | tr 'A-Z' 'a-z' 
+  190  2026-01-21 21:26:56 paste users pass
+  191  2026-01-21 21:27:02 paste users pass > usuarios
+  192  2026-01-21 21:27:07 paste users mails 
+  193  2026-01-21 21:27:13 paste users mails > correos
+  194  2026-01-21 21:27:20 jpin usuarios correos 
+  195  2026-01-21 21:27:25 join usuarios correos 
+  196  2026-01-21 21:27:39 paste usuarios correos 
+  197  2026-01-21 21:28:50 paste mails users > correos
+  198  2026-01-21 21:28:52 join usuarios correos 
+  199  2026-01-21 21:29:05 cat usuarios 
+  200  2026-01-21 21:29:09 cat correos 
+  201  2026-01-21 21:29:27 join usuarios correos 
+  202  2026-01-21 21:29:35 join -1 1 -2 2 usuarios correos 
+  203  2026-01-21 21:30:27 vi usuarios 
+  204  2026-01-21 21:30:40 join -1 1 -2 2 usuarios correos 
+  205  2026-01-21 21:30:47 vi usuarios 
+  206  2026-01-21 21:30:56 join -1 1 -2 2 usuarios correos 
+  207  2026-01-21 21:31:35 vi usuarios 
+  208  2026-01-21 21:32:09 man nl
+  209  2026-01-21 21:32:23 cat -n colors 
+  210  2026-01-21 21:32:31 nl colors 
+  211  2026-01-21 21:33:01 vi colors 
+  212  2026-01-21 21:33:26 wc -l colors 
+  213  2026-01-21 21:33:31 nl colors 
+  214  2026-01-21 21:34:02 cat -n colors 
+  215  2026-01-21 21:34:07 wc -l colors 
+  216  2026-01-21 21:34:14 nl colors 
+  217  2026-01-21 21:34:31 cat -e colors 
+  218  2026-01-21 21:34:55 cat -ne colors 
+  219  2026-01-21 21:35:10 cat -b colors 
+  220  2026-01-21 21:35:19 nl colors 
+  221  2026-01-21 21:37:31 vi pregunta
+  222  2026-01-21 21:39:03 cat pregunta 
+  223  2026-01-21 21:39:52 man nl
+  224  2026-01-21 21:40:52 nl -i 2 colors 
+  225  2026-01-21 21:56:21 wget https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.3.0-amd64-netinst.iso
+  226  2026-01-21 21:57:29 echo "10484b2d8e2780801dc7d354ba4ff238"
+  227  2026-01-21 21:57:33 md5sum debian-13.3.0-amd64-netinst.iso 
+  228  2026-01-21 21:58:13 sha256sum debian-13.3.0-amd64-netinst.iso 
+  229  2026-01-21 21:58:23 sha512sum debian-13.3.0-amd64-netinst.iso 
+  230  2026-01-21 22:02:49 exit
+  231  2026-01-21 19:48:43 man tr 
+  232  2026-01-21 19:49:05 echo "Hola" 
+  233  2026-01-21 19:49:13 echo "Hola" | tr 'o' 'M'
+  234  2026-01-21 19:49:22 echo "Hola" | tr 'oa' 'MJ'
+  235  2026-01-21 19:50:40 man cut 
+  236  2026-01-21 22:02:52 exit
+  237  2026-01-26 17:35:59 history-report 
+
+ROOT HISTORY
+------------
+    1  2026-01-26 17:38:29 exit
+    2  2026-01-26 17:38:29 cp /home/vagrant/passwd.5.gz /usr/share/man/man5/ 
+    3  2026-01-26 17:38:29 man 5 passwd 
+    4  2026-01-26 17:38:29 exit
+    5  2026-01-26 17:38:29 echo $PATH
+    6  2026-01-26 17:38:29 fdisk -l
+    7  2026-01-26 17:38:29 sudo fdisk -l 
+    8  2026-01-26 17:38:29 exit
+    9  2026-01-26 17:38:29 echo $PATH
+   10  2026-01-26 17:38:29 fdisk -l
+   11  2026-01-26 17:38:29 exit
+   12  2026-01-26 17:38:29 echo $PATH
+   13  2026-01-26 17:38:29 fdisk -l
+   14  2026-01-26 17:38:29 exit
+   15  2026-01-26 17:38:29 echo $PATH
+   16  2026-01-26 17:38:29 fdisk -l 
+   17  2026-01-26 17:38:29 /usr/sbin/fdisk -l 
+   18  2026-01-26 17:38:29 exit
+   19  2026-01-26 17:38:29 exit
+   20  2026-01-26 17:38:29 apt install fail2ban 
+   21  2026-01-26 17:38:29 exit
+   22  2026-01-26 17:38:29 apt install mariadb-server
+   23  2026-01-26 17:38:29 apt update 
+   24  2026-01-26 17:38:29 apt install mariadb-server
+   25  2026-01-26 17:38:29 cd /home/vagrant/
+   26  2026-01-26 17:38:29 ls
+   27  2026-01-26 17:38:29 cat database 
+   28  2026-01-26 17:38:29 mysql -u root 
+   29  2026-01-26 17:38:29 vi database backup.sh.1 
+   30  2026-01-26 17:38:29 cat database 
+   31  2026-01-26 17:38:29 mysql -u root < database 
+   32  2026-01-26 17:38:29 mysql -u root 
+   33  2026-01-26 17:38:29 vi credentials
+   34  2026-01-26 17:38:29 fmt credentials 
+   35  2026-01-26 17:38:29 cat credentials 
+   36  2026-01-26 17:38:29 passwd super
+   37  2026-01-26 17:38:29 passwd super < credentials 
+   38  2026-01-26 17:38:29 exit
+   39  2026-01-26 17:38:29 apt install locate
+   40  2026-01-26 17:38:29 rm /tmp/fstab 
+   41  2026-01-26 17:38:29 exit
+   42  2026-01-26 17:38:29 updatedb
+   43  2026-01-26 17:38:29 cp /etc/fstab /tmp/fstab
+   44  2026-01-26 17:38:29 exit
+   45  2026-01-26 17:38:29 updatedb
+   46  2026-01-26 17:38:29 exit
+   47  2026-01-26 17:38:29 dpkg -L locate 
+   48  2026-01-26 17:38:29 cat /etc/cron.daily/locate 
+   49  2026-01-26 17:38:29 exit
+   50  2026-01-26 17:38:29 apt install pwgen 
+   51  2026-01-26 17:38:29 exit
+    1  2026-01-26 18:17:45 mkdir blockbuster
+    2  2026-01-26 18:17:50 cd blockbuster 
+    3  2026-01-26 18:17:52 ls
+    4  2026-01-26 18:20:08 cp -r /vagrant/pelicules/* ./
+    5  2026-01-26 18:20:09 ls
+    6  2026-01-26 18:20:27 ls pelicules* 
+    7  2026-01-26 18:20:36 ls 
+    8  2026-01-26 18:20:42 rm -r __MACOSX/
+    9  2026-01-26 18:20:44 ls
+   10  2026-01-26 18:20:46 ls pelicules* 
+   11  2026-01-26 18:23:15 cp pelicules peliculas
+   12  2026-01-26 18:23:18 ls pelicules* 
+   13  2026-01-26 18:23:22 ls pelicul*
+   14  2026-01-26 18:23:47 cp pelicules peliculesa
+   15  2026-01-26 18:23:51 ls pelicules* 
+   16  2026-01-26 18:24:15 cp pelicules peliculesaaaa
+   17  2026-01-26 18:24:18 ls pelicules* 
+   18  2026-01-26 18:24:36 ls pelicules? 
+   19  2026-01-26 18:24:50 ls pelicules?.txt 
+   20  2026-01-26 18:26:02 rm peliculas 
+   21  2026-01-26 18:26:09 mv peliculesa peliculesb
+   22  2026-01-26 18:26:10 mv peliculesa peliculesc
+   23  2026-01-26 18:26:12 mv peliculesa peliculesD
+   24  2026-01-26 18:26:26 cp peliculesb peliculesa
+   25  2026-01-26 18:26:28 cp peliculesb peliculesc
+   26  2026-01-26 18:26:29 cp peliculesb peliculesD
+   27  2026-01-26 18:26:32 cp peliculesb peliculesM
+   28  2026-01-26 18:26:33 cp peliculesb peliculest
+   29  2026-01-26 18:26:42 ls * 
+   30  2026-01-26 18:26:45 ls
+   31  2026-01-26 18:26:58 ls pelicules? 
+   32  2026-01-26 18:27:14 ls -r pelicules? 
+   33  2026-01-26 18:28:53 ls pelicules[2-7].txt 
+   34  2026-01-26 18:29:01 ls pelicules*.txt 
+   35  2026-01-26 18:29:05 ls pelicules[2-7].txt 
+   36  2026-01-26 18:29:23 ls pelicules[b-e].txt 
+   37  2026-01-26 18:29:32 ls pelicules*.txt 
+   38  2026-01-26 18:29:34 ls pelicules[2-7].txt 
+   39  2026-01-26 18:29:45 ls pelicules[!2-7].txt 
+   40  2026-01-26 18:30:04 ls pelicules?.txt 
+   41  2026-01-26 18:30:06 ls pelicules[2-7].txt 
+   42  2026-01-26 18:30:09 ls pelicules[!2-7].txt 
+   43  2026-01-26 18:30:24 ls pelicules[aAbc].txt 
+   44  2026-01-26 18:30:34 ls pelicules[abc]
+   45  2026-01-26 18:30:42 ls pelicules[a-c]
+   46  2026-01-26 18:30:52 ls pelicules?
+   47  2026-01-26 18:30:59 ls pelicules[b-c]
+   48  2026-01-26 18:31:12 ls pelicules[A-b]
+   49  2026-01-26 18:31:48 ls pelicules[G-b]
+   50  2026-01-26 18:33:50 cat pelicules* 
+   51  2026-01-26 18:34:01 ls -A
+   52  2026-01-26 18:34:11 file * 
+   53  2026-01-26 18:35:13 ls pelicules*
+   54  2026-01-26 18:35:40 cat pelicules*.txt 
+   55  2026-01-26 18:35:58 cat pelicules*.txt | wc -l 
+   56  2026-01-26 18:36:07 cat pelicules*.txt | sort | uniq | wc -l 
+   57  2026-01-26 18:37:10 cp pelicules2.txt pelicules2
+   58  2026-01-26 18:37:13 cp pelicules2.txt pelicules.txt 
+   59  2026-01-26 18:37:15 file *
+   60  2026-01-26 18:37:42 ls pelicules* 
+   61  2026-01-26 18:37:51 ls pelicules*txt 
+   62  2026-01-26 18:38:40 ls pelicules*[!zip]
+   63  2026-01-26 18:38:59 cp pelicules2 peliculesi 
+   64  2026-01-26 18:39:02 ls pelicules*[!zip]
+   65  2026-01-26 18:39:30 ls pelicules* 
+   66  2026-01-26 18:39:35 file * 
+   67  2026-01-26 18:39:54 ls -l
+   68  2026-01-26 18:40:13 ls
+   69  2026-01-26 18:40:26 cat peliculesi 
+   70  2026-01-26 18:40:29 ls
+   71  2026-01-26 18:40:34 ls pelicules*[!zip]
+   72  2026-01-26 18:41:03 rm pelicules?
+   73  2026-01-26 18:41:11 cp pelicules.txt pelicules2
+   74  2026-01-26 18:41:13 cp pelicules.txt peliculesi
+   75  2026-01-26 18:41:40 ls
+   76  2026-01-26 18:41:52 ls pelicules*[!z]
+   77  2026-01-26 18:42:08 cp pelicules2 peliculesz
+   78  2026-01-26 18:42:10 ls
+   79  2026-01-26 18:42:11 ls pelicules*[!z]
+   80  2026-01-26 18:43:00 ls pelicules*[!z][!i][!p]
+   81  2026-01-26 18:43:51 ls pelicules*[!"zip"]
+   82  2026-01-26 18:44:09 ls pelicules*[!z]??
+   83  2026-01-26 18:44:14 ls pelicules*[!z??]
+   84  2026-01-26 18:44:29 ls pelicules*
+   85  2026-01-26 18:44:40 ls pelicules*[!z]??
+   86  2026-01-26 18:45:56 mkdir "DIR*NEW"
+   87  2026-01-26 18:45:58 ls
+   88  2026-01-26 18:46:05 ls DIR*NEW
+   89  2026-01-26 18:46:22 mkdir DIR-NEW
+   90  2026-01-26 18:46:31 ls -ld DIR*NEW
+   91  2026-01-26 18:46:41 ls -ld DIR\*NEW
+   92  2026-01-26 18:46:59 ls -ld "DIR*NEW"
+   93  2026-01-26 18:48:15 mkdir "DIR/NEW"
+   94  2026-01-26 18:48:22 mkdir "DIR\/NEW"
+   95  2026-01-26 18:48:56 ls 
+   96  2026-01-26 18:49:51 ls | grep "zip"
+   97  2026-01-26 18:50:00 ls | grep -v "zip"
+   98  2026-01-26 18:50:12 rmdir *
+   99  2026-01-26 18:50:17 ls
+  100  2026-01-26 18:50:43 cd
+  101  2026-01-26 18:50:59 mkdir docroot
+  102  2026-01-26 18:51:20 echo "secret" > docroot/
+  103  2026-01-26 18:51:25 echo "secret" > docroot/.htaccess
+  104  2026-01-26 18:52:18 mkdir -p var/www/html
+  105  2026-01-26 18:52:20 cd var/www/html
+  106  2026-01-26 18:52:21 ls
+  107  2026-01-26 18:52:28 mkdir wordpress
+  108  2026-01-26 18:52:30 cd wordpress/
+  109  2026-01-26 18:52:34 wget https://wordpress.org/latest.zip
+  110  2026-01-26 18:54:07 pwd
+  111  2026-01-26 18:54:38 ls
+  112  2026-01-26 18:54:42 unzip latest.zip 
+  113  2026-01-26 18:54:48 ls 
+  114  2026-01-26 18:55:33 ls wordpress/
+  115  2026-01-26 18:56:18 mv wordpress/* ./ 
+  116  2026-01-26 18:56:20 ls
+  117  2026-01-26 18:56:22 ls wordpress/
+  118  2026-01-26 18:57:33 rmdir wordpress/
+  119  2026-01-26 18:57:50 ls wordpress/
+  120  2026-01-26 18:57:58 ls -A wordpress/ 
+  121  2026-01-26 18:58:38 rmdir wordpress/
+  122  2026-01-26 18:58:43 ls -A wordpress/ 
+  123  2026-01-26 18:58:48 rm -r wordpress/
+  124  2026-01-26 18:58:50 ls
+  125  2026-01-26 18:59:25 echo "Hola" > ../.htaccess
+  126  2026-01-26 18:59:26 ls ..
+  127  2026-01-26 18:59:30 ls -A ..
+  128  2026-01-26 18:59:35 ls -A ../
+  129  2026-01-26 18:59:49 mv ../.* ./ 
+  130  2026-01-26 18:59:53 ls -A ../
+  131  2026-01-26 18:59:55 ls -A
+  132  2026-01-26 19:00:54 mv .* cd
+  133  2026-01-26 19:00:57 cd
+  134  2026-01-26 19:00:59 cd blockbuster/
+  135  2026-01-26 19:01:00 ls
+  136  2026-01-26 19:01:20 ls | grep -v "zip"
+  137  2026-01-26 19:01:53 man grep 
+  138  2026-01-26 19:02:18 man rm 
+  139  2026-01-26 19:03:00 ls 
+  140  2026-01-26 19:03:07 ls | grep "zip"
+  141  2026-01-26 19:03:30 cp pelicules.txt pelzipcules.txt 
+  142  2026-01-26 19:03:32 ls | grep "zip"
+  143  2026-01-26 19:04:02 ls | grep ".zip"
+  144  2026-01-26 19:05:00 echo "$HOSTNAME"
+  145  2026-01-26 19:05:09 echo '$HOSTNAME'
+  146  2026-01-26 19:06:07 ls | grep "\.zip"
+  147  2026-01-26 19:06:30 ls | grep '.zip'
+  148  2026-01-26 19:06:33 ls | grep '\.zip'
+  149  2026-01-26 19:07:44 cp pelicules.txt pel.zip.cules.txt
+  150  2026-01-26 19:07:46 ls
+  151  2026-01-26 19:07:54 ls | grep "\.zip"
+  152  2026-01-26 19:07:58 ls | grep ".zip"
+  153  2026-01-26 19:09:10 ls | grep ".zip$"
+  154  2026-01-26 19:09:19 ls | grep "zip$"
+  155  2026-01-26 19:09:36 ls | grep "\.zip$"
+  156  2026-01-26 19:09:51 vi expressions
+  157  2026-01-26 19:10:28 cat expressions 
+  158  2026-01-26 19:10:35 alias
+  159  2026-01-26 19:10:49 alias grep="grep --color=auto"
+  160  2026-01-26 19:10:52 cat expressions 
+  161  2026-01-26 19:10:57 grep cola expressions 
+  162  2026-01-26 19:11:21 grep "cola$" expressions 
+  163  2026-01-26 19:11:54 ls | grep "zip$" 
+  164  2026-01-26 19:12:25 ls
+  165  2026-01-26 19:12:35 ls | grep "\.txt$" 
+  166  2026-01-26 19:13:26 ls > out
+  167  2026-01-26 19:13:40 grep "txt$" out 
+  168  2026-01-26 19:14:13 cat out 
+  169  2026-01-26 19:14:38 file pelicules2 
+  170  2026-01-26 19:15:03 ls | grep zip$
+  171  2026-01-26 19:15:06 ls | grep txt$
+  172  2026-01-26 19:15:24 ls
+  173  2026-01-26 19:16:00 grep cola$ expressions 
+  174  2026-01-26 19:16:03 grep ola$ expressions 
+  175  2026-01-26 19:16:35 vi expressions 
+  176  2026-01-26 19:16:46 cat expressions 
+  177  2026-01-26 19:16:48 grep ola$ expressions 
+  178  2026-01-26 19:17:03 grep ola expressions 
+  179  2026-01-26 19:17:42 cat -n expressions 
+  180  2026-01-26 19:18:18 grep "^ola$" expressions 
+  181  2026-01-26 19:18:27 grep -n "^ola$" expressions 
+  182  2026-01-26 19:19:06 man grep 
+  183  2026-01-26 19:19:33 cat -n expressions 
+  184  2026-01-26 19:19:36 grep -n "^ola$" expressions 
+  185  2026-01-26 19:19:46 grep -x ola expressions 
+  186  2026-01-26 19:19:52 man grep 
+  187  2026-01-26 19:21:29 vi expressions 
+  188  2026-01-26 19:22:34 grep cola expressions 
+  189  2026-01-26 19:22:37 cat expressions 
+  190  2026-01-26 19:22:55 grep [Cc]ola expressions 
+  191* 2026-01-26 19:23:19 
+  192  2026-01-26 19:23:44 grep [Cc]ola expressions  
+  193  2026-01-26 19:23:55 grep -i cola expressions  
+  194  2026-01-26 19:25:06 ls 
+  195  2026-01-26 19:25:13 ls | grep .zip
+  196  2026-01-26 19:27:22 ls | grep pelicules. 
+  197  2026-01-26 19:28:29 ls | grep pelicules.$
+  198  2026-01-26 19:29:00 ls pelicules? 
+  199  2026-01-26 19:30:07 cp pelicules index-pelicules
+  200  2026-01-26 19:30:09 ls | grep pelicules.
+  201  2026-01-26 19:30:16 cp pelicules index-pelicules.txt
+  202  2026-01-26 19:30:19 ls | grep pelicules.
+  203  2026-01-26 19:30:41 ls | grep pelicules.$ 
+  204  2026-01-26 19:30:50 ls | grep ^pelicules.
+  205  2026-01-26 19:31:28 ls pelicules.
+  206  2026-01-26 19:33:23 cat expressions 
+  207  2026-01-26 19:35:11 ls
+  208  2026-01-26 19:35:19 ls | grep a* 
+  209  2026-01-26 19:35:39 vi expressions 
+  210  2026-01-26 19:35:54 grep tem expressions 
+  211  2026-01-26 19:36:06 grep tema* expressions 
+  212  2026-01-26 19:36:37 vi expressions 
+  213  2026-01-26 19:36:55 grep tema* expressions 
+  214  2026-01-26 19:37:16 grep tema*$ expressions 
+  215  2026-01-26 19:38:42 vi expressions 
+  216  2026-01-26 19:39:09 grep tem*a* expressions 
+  217  2026-01-26 19:39:14 vi expressions 
+  218  2026-01-26 19:39:27 cat expressions 
+  219  2026-01-26 19:39:30 grep tem*a* expressions 
+  220  2026-01-26 19:40:05 vi expressions 
+  221  2026-01-26 19:40:21 grep tem*a* expressions 
+  222  2026-01-26 19:40:38 vi expressions 
+  223  2026-01-26 19:40:51 grep tem*a* expressions 
+  224  2026-01-26 19:41:51 grep te.* expressions 
+  225  2026-01-26 19:42:42 grep -o te.* expressions 
+  226  2026-01-26 19:43:21 grep ola expressions 
+  227  2026-01-26 19:43:45 grep -c ola expressions 
+  228  2026-01-26 19:44:38 grep -o ola expressions 
+  229  2026-01-26 19:44:42 grep -o ola expressions | wc -l 
+  230  2026-01-26 19:45:26 grep -oc ola expressions
+  231  2026-01-26 19:45:43 cat expressions 
+  232  2026-01-26 19:46:52 ls 
+  233  2026-01-26 19:47:06 ls | grep pelicules[2-23] 
+  234  2026-01-26 19:47:30 ls | grep "pelicules[2-23]" 
+  235  2026-01-26 19:48:09 ls | grep "pelicules[2-9]" 
+  236  2026-01-26 19:48:20 ls | grep "pelicules[5-9]" 
+  237  2026-01-26 19:48:38 ls | grep "pelicules[1-2][5-9]" 
+  238  2026-01-26 19:49:17 ls | grep "pelicules[1-2]*" 
+  239  2026-01-26 19:49:45 ls | grep "pelicules[1-2]*[1-9]" 
+  240  2026-01-26 19:50:23 ls
+  241  2026-01-26 19:50:37 cat expressions 
+  242  2026-01-26 19:50:46 cat expressions | grep a*
+  243  2026-01-26 19:50:53 cat expressions | grep "a*"
+  244  2026-01-26 19:51:16 cat expressions | grep "a{5}"
+  245  2026-01-26 19:51:19 cat expressions | grep "a{4}"
+  246  2026-01-26 19:51:22 cat expressions | grep "a{3}"
+  247  2026-01-26 19:52:17 cat expressions | grep -E "a{3}"
+  248  2026-01-26 19:52:25 cat expressions | grep -E "a{4}"
+  249  2026-01-26 19:52:32 cat expressions | grep -E "a{5}"
+  250  2026-01-26 19:52:58 cat expressions | grep -E "a{3,5}"
+  251  2026-01-26 19:55:01 cat expressions | grep -E tema+ 
+  252  2026-01-26 19:55:06 cat expressions | grep -E tema*
+  253  2026-01-26 19:55:28 cat expressions | grep -E tema+ 
+  254  2026-01-26 19:55:35 cat expressions | grep -E tema? 
+  255  2026-01-26 19:56:15 cat expressions | grep tema+ 
+  256  2026-01-26 19:59:00 echo "me gusta la tarta" | grep ""^t...a$" 
+  257  2026-01-26 19:59:07 echo "me gusta la tarta" | grep "^t...a$" 
+  258  2026-01-26 19:59:11 echo "me gusta la tarta" 
+  259  2026-01-26 19:59:17 echo "me gusta la tarta" | grep "t...a$" 
+  260  2026-01-26 19:59:46 echo "me gusta la tarta" | grep "\bt...a\b"
+  261  2026-01-26 20:00:14 echo "me gusta la tarta" | grep -w "t...a"
+  262  2026-01-26 20:00:50 ip address show 
+  263  2026-01-26 20:01:35 ip address show | grep -E "[1-9]{1,3}" 
+  264  2026-01-26 20:01:47 ip address show 
+  265  2026-01-26 20:02:27 ip address show | grep -E "[1-9]{1,3}." 
+  266  2026-01-26 20:02:33 ip address show | grep -E "[0-9]{1,3}." 
+  267  2026-01-26 20:03:36 ip address show | grep -E "[1-9]{1}[0-9]{0,2}." 
+  268  2026-01-26 20:04:19 ip address show | grep -E "[1-9]{1}[0-9]{0,2}\." 
+  269  2026-01-26 20:05:01 ip address show | grep -E "([1-9]{1}[0-9]{0,2}\.){3}" 
+  270  2026-01-26 20:05:20 ip address show | grep -E "([0-9]{1,3}\.){3}" 
+  271  2026-01-26 20:06:50 man grep 
+  272  2026-01-26 20:07:14 ip address show | grep -E "([1-9]{1}[0-9]{0,2}\.){3}" 
+  273  2026-01-26 20:07:23 ip address show | grep -E "([0-9]{1,3}\.){3}" 
+  274  2026-01-26 20:07:50 ip address show | grep -E "([0-9]{1,3}\.){4}" 
+  275  2026-01-26 20:08:43 ip address show | grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" 
+  276  2026-01-26 20:09:10 ip address show > ips
+  277  2026-01-26 20:09:13 vi ips 
+  278  2026-01-26 20:09:26 cat ips 
+  279  2026-01-26 20:09:38 grep -E "([0-9]{1,3}\.){3}[0-9]{1,3}" ips 
+  280  2026-01-26 20:11:39 cd
+  281  2026-01-26 20:11:42 cd /etc/squid/
+  282  2026-01-26 20:11:45 wc -l squid.conf 
+  283  2026-01-26 20:12:36 cat squid.conf 
+  284  2026-01-26 20:12:57 cd
+  285  2026-01-26 20:13:00 vi config
+  286  2026-01-26 20:13:31 cat config 
+  287  2026-01-26 20:14:13 grep -v "^#" config 
+  288  2026-01-26 20:14:17 grep -v "#" config 
+  289  2026-01-26 20:14:50 grep -v "^#" /etc/squid/squid.conf 
+  290  2026-01-26 20:15:08 wc -l /etc/squid/squid.conf
+  291  2026-01-26 20:15:12 grep -v "^#" /etc/squid/squid.conf | wc -l 
+  292  2026-01-26 20:15:20 cat config 
+  293  2026-01-26 20:15:33 grep -v "^#" config 
+  294  2026-01-26 20:15:50 grep -v "^#" config | grep -v "^$" 
+  295  2026-01-26 20:16:04 cat -e config 
+  296  2026-01-26 20:16:09 grep -v "^#" config | grep -v "^$" 
+  297  2026-01-26 20:16:19 grep -v "^#" config | grep -v "^.$" 
+  298  2026-01-26 20:18:14 grep -v "^#" config | grep -v "^ *$"  
+  299  2026-01-26 20:19:13 grep -vE "^#|^ *$" config 
+  300  2026-01-26 20:19:40 grep -vE "^#|^ *$" /etc/squid/squid.conf 
+  301  2026-01-26 20:20:46 grep -v -E "^#|^ *$" /etc/squid/squid.conf | wc -l 
+  302  2026-01-26 20:21:07 cd blockbuster/
+  303  2026-01-26 20:21:12 cat expressions 
+  304  2026-01-26 20:21:24 grep -E "tem|ola" expressions 
+  305  2026-01-26 20:22:10 cd
+  306  2026-01-26 20:22:32 cat config 
+  307  2026-01-26 20:22:37 cat -e config 
+  308  2026-01-26 20:23:25 man grep
+  309  2026-01-26 20:25:26 echo "me gusta la tarta" | grep -E "t{1-3}a"
+  310  2026-01-26 20:25:46 echo "me gusta la tarta" | grep -E "t[a-z]{1-3}a"
+  311  2026-01-26 20:26:02 echo "me gusta la tarta" | grep -E "t{1,3}a"
+  312  2026-01-26 20:26:07 echo "me gusta la tarta" | grep -E "t[a-z]{1,3}a"
+  313  2026-01-26 20:29:19 alias YO=$USER
+  314  2026-01-26 20:29:25 echo $YO
+  315  2026-01-26 20:29:38 echo $HOSTNAME
+  316  2026-01-26 20:29:44 echo HOSTNAME
+  317  2026-01-26 20:30:03 vi users
+  318  2026-01-26 20:30:11 cat users 
+  319  2026-01-26 20:30:20 cat users | grep $USER
+  320* 2026-01-26 20:30:27 echo $USE
+  321  2026-01-26 20:30:46 cat users | grep $HOME
+  322  2026-01-26 20:30:49 echo $HOME
+  323  2026-01-26 20:31:26 echo $((3*2))
+  324  2026-01-26 20:32:20 uname 
+  325  2026-01-26 20:32:25 uname -a
+  326  2026-01-26 20:32:35 uname -r
+  327  2026-01-26 20:32:58 ls -l /boot/vmlinuz-$(uname -r) 
+  328  2026-01-26 20:33:32 date 
+  329  2026-01-26 20:33:45 date +%Y%m%d
+  330  2026-01-26 20:34:18 history > $(date +%Y%m%d)-history-demo
+  331  2026-01-26 20:34:19 ls
+  332  2026-01-26 20:35:21 history > $(date +%Y-%m-%d)-history-demo
+  333  2026-01-26 20:35:22 ls
+  334  2026-01-26 20:36:42 echo $(date + %d.%m.%y)
+  335  2026-01-26 20:36:47 echo $(date +%d.%m.%y)
+  336  2026-01-26 20:36:59 date +%d.%m.%y
+  337  2026-01-26 20:37:06 date +%d.%m.%Y
+  338  2026-01-26 20:37:23 date +%d-%m-%Y
+  339  2026-01-26 20:38:53 mkdir paquetes
+  340  2026-01-26 20:38:55 cd paquetes/
+  341  2026-01-26 20:51:50 dd if=/dev/zero of=file1 bs=1024k count=200
+  342  2026-01-26 20:51:55 dd if=/dev/zero of=file2 bs=1024k count=300
+  343  2026-01-26 20:52:02 dd if=/dev/zero of=file3 bs=1024k count=400
+  344  2026-01-26 20:52:06 ls -lA
+  345  2026-01-26 20:52:11 ls -lh
+  346  2026-01-26 20:52:15 ls -l
+  347  2026-01-26 20:52:25 ls -lh
+  348  2026-01-26 20:53:33 tar cfv paquete.tar file? 
+  349  2026-01-26 20:53:43 ls -lh
+  350  2026-01-26 20:53:51 tar tf paquete.tar 
+  351  2026-01-26 20:54:45 man df 
+  352  2026-01-26 20:54:50 df 
+  353  2026-01-26 20:55:04 df -h 
+  354  2026-01-26 20:55:08 df -hT
+  355  2026-01-26 20:55:18 df -h 
+  356  2026-01-26 20:56:08 df -h | grep -E "Filesystem|home"
+  357  2026-01-26 20:56:23 df -h | grep "home"
+  358  2026-01-26 20:56:47 df -h | grep -E "Filesystem|home"
+  359  2026-01-26 20:57:06 df -h | grep -E 'Filesystem|home'
+  360  2026-01-26 20:57:16 alias ddf="df -h | grep -E 'Filesystem|home'"
+  361  2026-01-26 20:57:18 ddf
+  362  2026-01-26 20:57:32 ls -lh
+  363  2026-01-26 20:57:48 rm paquete.tar 
+  364  2026-01-26 20:57:50 ddf
+  365  2026-01-26 20:58:06 tar cfv paquete.tar file? 
+  366  2026-01-26 20:58:18 ls -lh
+  367  2026-01-26 20:58:20 ddf
+  368  2026-01-26 20:58:50 gzip file1 
+  369  2026-01-26 20:59:36 ddf
+  370  2026-01-26 20:59:55 ls -lh
+  371  2026-01-26 21:00:40 cp /etc/fstab ./
+  372  2026-01-26 21:00:41 ls
+  373  2026-01-26 21:00:44 cat fstab 
+  374  2026-01-26 21:00:51 file fstab 
+  375  2026-01-26 21:00:56 gzip fstab 
+  376  2026-01-26 21:01:00 ls 
+  377  2026-01-26 21:01:03 file fstab.gz 
+  378  2026-01-26 21:01:09 cat fstab.gz 
+  379  2026-01-26 21:01:14 zcat fstab.gz 
+  380  2026-01-26 21:02:21 cd /var/log/
+  381  2026-01-26 21:02:22 ls
+  382  2026-01-26 21:11:51 man ps
+  383  2026-01-26 21:13:56 cd
+  384  2026-01-26 21:13:59 cd paquetes/
+  385  2026-01-26 21:14:01 ls -lh
+  386  2026-01-26 21:14:22 ddf
+  387  2026-01-26 21:14:56 gzip paquete.tar 
+  388  2026-01-26 21:15:05 ddf
+  389  2026-01-26 21:15:08 ls -lh
+  390  2026-01-26 21:16:45 gzip -d file1.gz 
+  391  2026-01-26 21:17:06 tar cfJ paquete file?
+  392  2026-01-26 21:17:45 ls -lh
+  393  2026-01-26 21:17:50 file paquete
+  394  2026-01-26 21:18:31 tar cfj paquete.bz2 file?
+  395  2026-01-26 21:21:15 ls -lh
+  396  2026-01-26 21:21:25 file paquete.bz2 
+  397  2026-01-26 21:22:08 nv paquete.tar.gz ../blockbuster/
+  398  2026-01-26 21:22:16 mv paquete.tar.gz ../blockbuster/
+  399  2026-01-26 21:22:17 cd ../blockbuster/
+  400  2026-01-26 21:22:19 ls
+  401  2026-01-26 21:22:56 tar xzfv paquete.tar.gz 
+  402  2026-01-26 21:23:05 ls
+  403  2026-01-26 21:23:13 ls -lh
+  404  2026-01-26 21:23:24 ls -lh file?
+  405  2026-01-26 21:23:29 ls -lh paquete.tar.gz 
+  406  2026-01-26 21:25:36 cd
+  407  2026-01-26 21:25:39 cd ripe
+  408  2026-01-26 21:25:47 mkdir ripe
+  409  2026-01-26 21:26:52 cd paquetes/
+  410  2026-01-26 21:26:53 ls
+  411  2026-01-26 21:27:26 echo "Hola" > file1.swp
+  412  2026-01-26 21:27:33 echo "Hola" > /tmp/file12swp
+  413  2026-01-26 21:27:43 echo "Hola" > ~/file13swp
+  414  2026-01-26 21:27:58 echo "Hola" > ~/blockbuster/ile14swp
+  415  2026-01-26 21:28:09 find . -type f -name "*swp"
+  416  2026-01-26 21:28:15 find / -type f -name "*swp"
+  417  2026-01-26 21:28:27 find / -type f -name "*swp" 2> /dev/null 
+  418  2026-01-26 21:29:51 find / -type f -name "*swp" 2> /dev/null | xargs "ls -l" 
+  419  2026-01-26 21:29:55 find / -type f -name "*swp" 2> /dev/null | xargs ls -l 
+  420  2026-01-26 21:30:10 find / -type f -name "*swp" 2> /dev/null | xargs file 
+  421  2026-01-26 21:31:47 wget https://www.lpi.org/wp-content/webp-express/webp-images/uploads/2023/04/DevOpsToolsEngineer.jpg.webp
+  422  2026-01-26 21:31:50 ls
+  423  2026-01-26 21:32:04 mv DevOpsToolsEngineer.jpg.webp info.txt
+  424  2026-01-26 21:32:07 cd
+  425  2026-01-26 21:32:33 find . -type f -name "*txt" 2> /dev/null 
+  426  2026-01-26 21:32:39 find . -type f -name "*txt" 2> /dev/null | xargs file 
+  427  2026-01-26 21:33:46 find . -type f -name "*txt" 2> /dev/null | xargs file | grep -vE "ASCII text"|"Unicode"
+  428  2026-01-26 21:34:05 find . -type f -name "*txt" 2> /dev/null | xargs file | grep -vE "'ASCII text'|'Unicode'"
+  429* 2026-01-26 21:34:30 find . -type f -name "*txt" 2> /dev/null | xargs file
+  430  2026-01-26 21:36:12 find / -type f -name "swp" 2> /dev/null
+  431  2026-01-26 21:36:20 find / -type f -name "*swp" 2> /dev/null
+  432  2026-01-26 21:36:46 find / -type f -name "*swp" 2> /dev/null | xargs ls -l 
+  433  2026-01-26 21:36:52 find / -type f -name "*swp" 2> /dev/null | xargs file 
+  434  2026-01-26 21:37:39 find / -type f -name "*swp" 2> /dev/null | xargs rm 
+  435  2026-01-26 21:37:43 find / -type f -name "*swp" 2> /dev/null
+  436  2026-01-26 21:38:15 man xargs 
+  437  2026-01-26 21:39:22 find blockbuster/ -type f -name "*txt" 2> /dev/null
+  438  2026-01-26 21:39:28 find blockbuster/ -type f -name "*txt" 2> /dev/null | xargs file 
+  439  2026-01-26 21:39:34 find blockbuster/ -type f -name "*txt" 2> /dev/null | xargs file > report
+  440  2026-01-26 21:39:37 cat report 
+  441  2026-01-26 21:41:07 history
+  442  2026-01-26 21:41:14 history | grep swp
+  443* 2026-01-26 21:41:22 echo "Hola" > file1.sw2
+  444  2026-01-26 21:41:29 echo "Hola" > /tmp/file12swp
+  445  2026-01-26 21:41:32 echo "Hola" > ~/file13swp
+  446  2026-01-26 21:41:36 echo "Hola" > ~/blockbuster/ile14swp
+  447  2026-01-26 21:41:45 find / -type f -name "*swp" 2> /dev/null
+  448  2026-01-26 21:41:53 mkdir backup
+  449  2026-01-26 21:42:32 find / -type f -name "*swp" 2> /dev/null | xargs -I {} cp {} backup/ 
+  450  2026-01-26 21:42:48 ls backup
+  451  2026-01-26 21:42:52 ls -l backup
+  452  2026-01-26 21:45:32 man tee 
+  453  2026-01-26 21:45:49 mkdir redirecciones
+  454  2026-01-26 21:45:50 cd redirecciones
+  455  2026-01-26 21:45:51 ls
+  456  2026-01-26 21:46:14 find ~/ -type f -name "*txt" | tee match.txt 
+  457  2026-01-26 21:46:20 ls
+  458  2026-01-26 21:46:22 cat match.txt 
+  459  2026-01-26 21:48:59 tmux new -s TEE
+  460  2026-01-26 21:53:41 cd
+  461  2026-01-26 21:54:10 tmux new -s TEE
+  462  2026-01-26 21:56:57 ip address show | grep -w inet 
+  463  2026-01-26 21:57:03 ip address show | grep -w inet | cut -d" " -f6
+  464  2026-01-26 21:57:22 ip address show | grep -w inet | cut -d" " -f6 > /etc/network/interfaces.backup
+  465  2026-01-26 21:57:40 sudo ip address show | grep -w inet | cut -d" " -f6 > /etc/network/interfaces.backup
+  466  2026-01-26 21:58:16 ip address show | grep -w inet | cut -d" " -f6 > /etc/network/interfaces.backup
+  467  2026-01-26 21:58:21 ip address show | grep -w inet | cut -d" " -f6 | tee /etc/network/interfaces.backup
+  468  2026-01-26 21:58:44 ip address show | grep -w inet | cut -d" " -f6 | sudo tee /etc/network/interfaces.backup
+  469  2026-01-26 21:58:47 cat /etc/network/interfaces.backup 
+  470  2026-01-26 22:01:52 ls /etc/fstab 
+  471  2026-01-26 22:01:54 ls fstab 
+  472  2026-01-26 22:02:08 cat fstab 
+  473  2026-01-26 22:02:21 cp /etc/resolv.conf fstab
+  474  2026-01-26 22:02:23 ls
+  475  2026-01-26 22:02:29 cat fstab 
+  476  2026-01-26 22:02:46 echo "HOLA" > FSTAB
+  477  2026-01-26 22:02:50 echo "HOLA" > Fstab
+  478  2026-01-26 22:02:51 ls
+  479  2026-01-26 22:07:18 history-report 
