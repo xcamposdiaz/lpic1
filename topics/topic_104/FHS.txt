@@ -1,0 +1,18 @@
+bin	archivos binarios del sistema						NO!
+boot	archivos de arranque del SO						Garantizar arranque / Velocidad 
+dev	mapeo de dispositivos (discos, perifericos, etc)			N/A
+etc	archivos de configuracion (SO, servicios, etc)				NO!
+home	directorios HOME de cada usuario del SO (excepto root)			Backups datos usuario
+lib	librerias (dependencias) de archivos binarios				NO!
+media	puntos de montaje de dispositivos auto-montables (USB, etc)		N/A
+mnt	puntos de montaje puntuales (de forma temporal)				N/A
+opt	software de terceros (no libre, propiedad de alguien) 			Mejor no separar
+proc	informacion de procesos y sistema (RAM FS)				N/A
+root	directorio HOME del usuario root					NO!
+run	archivos en tiempo de ejecucion del SO					NO!
+sbin	archivos "super" binarios del SO					NO!
+srv	datos ofrecidos por un servicio						Mejor separar
+sys	informacion de SO y de dispositivos (RAM FS) --> "evolucion de /proc" 	N/A
+tmp	archivos temporales del SO						Proteccion de espacio en disco
+usr	2a jerarquia del SO / Datos de usuario compartidos en modo lectura	Mejor no separar
+var	archivos variables del SO "sin accion directa"				Proteccion de espacio en disco

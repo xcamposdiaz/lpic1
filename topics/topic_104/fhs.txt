@@ -1,0 +1,18 @@
+bin	ejecutables (binarios)
+boot	archivos necesarios para el arranque
+dev	"mapeo" de los dispositivos del equipo. 
+etc	archivos de configuraciÃn
+home	contenedor de directorios personales de usuario
+lib	librerias (dependencias de software o SO)
+media	contenedor de puntos de montajes automontados (USB, DVD, ... ) 
+mnt	punto de montaje de dispositivos (DVD, USB, particiones ...) de forma TEMPORAL
+opt	software de terceros
+proc	informaciÃn de procesos (y del kernel y del SO) --> RAMFS
+root	directorio personal de root 
+run	archivos generados en tiempo de ejecuciÃn (se encuentran en disco)
+sbin	ejecutables (binarios) "sÃlo" por el root
+srv	archivos de servidor                           
+sys	informaciÃn del kernel y del SO                 --> RAMFS	
+tmp	archivos temporales del SO ("volatil")
+usr	2a jerarquia de archivos del SO (datos usuario compartidos)
+var	archivos variables del SO

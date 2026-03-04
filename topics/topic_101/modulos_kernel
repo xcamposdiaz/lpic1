@@ -1,0 +1,71 @@
+GESTIÓN MÓDULOS DE KERNEL
+=========================
+Ubicación de los módulos:
+   - /lib/modules/$(uname -r)/
+
+Comandos:
+ modprobe:	carga o elimina módulos de kernel y sus dependencias
+  * -r		descargar módulo
+ # modprobe [MODULE_NAME]
+ insmod /rmmod:	carga o elimina módulos de kernel sin dependencias
+ # insmod [MODULE_PATH]
+ modinfo:	mostrar información sobre un módulo de kernel
+ # modinfo [MODULE_NAME]
+ lsmod:		listar módulos activos en el kernel
+
+Ejemplo:
+Situación inicial
+----------------
+root@buster-64:~# df -hT 
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  978M     0  978M   0% /dev
+tmpfs          tmpfs     200M  3.3M  197M   2% /run
+/dev/sda3      ext4       28G  7.4G   19G  29% /
+tmpfs          tmpfs     998M     0  998M   0% /dev/shm
+tmpfs          tmpfs     5.0M  4.0K  5.0M   1% /run/lock
+tmpfs          tmpfs     998M     0  998M   0% /sys/fs/cgroup
+/dev/sda1      ext4       40G   61M   38G   1% /home
+tmpfs          tmpfs     200M   20K  200M   1% /run/user/1000
+root@buster-64:~# lsmod | grep xfs
+
+Montamos partición (y se carga el módulo)
+-----------------------------------------
+root@buster-64:~# time mount /dev/sda2 /mnt/
+
+real	0m0.451s
+user	0m0.000s
+sys	0m0.085s
+root@buster-64:~# df -hT 
+Filesystem     Type      Size  Used Avail Use% Mounted on
+udev           devtmpfs  978M     0  978M   0% /dev
+tmpfs          tmpfs     200M  3.3M  197M   2% /run
+/dev/sda3      ext4       28G  7.4G   19G  29% /
+tmpfs          tmpfs     998M     0  998M   0% /dev/shm
+tmpfs          tmpfs     5.0M  4.0K  5.0M   1% /run/lock
+tmpfs          tmpfs     998M     0  998M   0% /sys/fs/cgroup
+/dev/sda1      ext4       40G   61M   38G   1% /home
+tmpfs          tmpfs     200M   20K  200M   1% /run/user/1000
+/dev/sda2      xfs        30G  4.8G   26G  16% /mnt
+root@buster-64:~# lsmod | grep xfs
+xfs                  1458176  1
+libcrc32c              16384  1 xfs
+
+Desmontamos la partición y la volvemos a montar sin descargar el módulo
+-----------------------------------------------------------------------
+root@buster-64:~# umount /dev/sda2
+root@buster-64:~# time mount /dev/sda2 /mnt/
+
+real	0m0.113s
+user	0m0.000s
+sys	0m0.049s
+
+Desmontamos la partición y la volvemos a montar descargando el módulo
+---------------------------------------------------------------------
+root@buster-64:~# umount /dev/sda2
+root@buster-64:~# modprobe -r xfs
+root@buster-64:~# lsmod | grep xfs
+root@buster-64:~# time mount /dev/sda2 /mnt/
+
+real	0m0.405s
+user	0m0.009s
+sys	0m0.008s

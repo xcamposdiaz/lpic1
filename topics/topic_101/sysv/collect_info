@@ -1,0 +1,26 @@
+#! /bin/bash
+
+### BEGIN INIT INFO
+# Provides: report for the OS
+# Default-Start: 2 3 5
+# Default-Stop: 0 1 6
+# Short-Description: Data report of OS
+# Description: Test of SysV init scripts
+# 
+### END INIT INFO
+
+export DIR=/usr/local/bin
+
+case "$1" in
+ start)
+   $DIR/report.sh
+   ;;
+ stop)
+   $DIR/clean.sh
+   ;;
+ *)
+   echo "Usage: report {start|stop}" >&2
+   exit 3
+   ;;
+esac
+

@@ -1,0 +1,481 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Made with Remarkable!
+  </title>
+  <link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/styles/github.min.css" rel="stylesheet"/>
+  <style type="text/css">
+   body,table tr{background-color:#fff}table tr td,table tr th{border:1px solid #ccc;text-align:left;padding:6px 13px;margin:0}pre code,table,table tr{padding:0}hr,pre code{background:0 0}body{font:16px Helvetica,Arial,sans-serif;line-height:1.4;color:#333;word-wrap:break-word;padding:10px 15px}strong,table tr th{font-weight:700}h1{font-size:2em;margin:.67em 0;text-align:center}h2{font-size:1.75em}h3{font-size:1.5em}h4{font-size:1.25em}h1,h2,h3,h4,h5,h6{font-weight:700;position:relative;margin-top:15px;margin-bottom:15px;line-height:1.1}h1,h2{border-bottom:1px solid #eee}hr{height:0;margin:15px 0;overflow:hidden;border:0;border-bottom:1px solid #ddd}a{color:#4183C4}a.absent{color:#c00}ol,ul{padding-left:15px;margin-left:5px}ol{list-style-type:lower-roman}table tr{border-top:1px solid #ccc;margin:0}table tr:nth-child(2n){background-color:#aaa}table tr td :first-child,table tr th :first-child{margin-top:0}table tr td:last-child,table tr th :last-child{margin-bottom:0}img{max-width:100%}blockquote{padding:0 15px;border-left:4px solid #ccc}code,tt{margin:0 2px;padding:0 5px;white-space:nowrap;border:1px solid #eaeaea;background-color:#f8f8f8;border-radius:3px}pre code{margin:0;white-space:pre;border:none}.highlight pre,pre{background-color:#f8f8f8;border:1px solid #ccc;font-size:13px;line-height:19px;overflow:auto;padding:6px 10px;border-radius:3px}
+  </style>
+ </head>
+ <body>
+  <h1>
+   Montaje de sistemas de ficheros
+  </h1>
+  <p>
+   Cuando ya hemos particionado y estructurado nuestro disco duro con las hereamientas de particionado y sistemas de ficheros, es el momento de poder empezar a utilizarlas. Para poder hacer esto necesitamos que las particiones sean visibles dentro del sistema, y para ello hay que "montarlas".
+  </p>
+  <p>
+   Este concepto, el montaje de particiones, es lo que nos permite poder acceder a los contenidos de una partición deterninada desde un directorio (punto de montaje) dentro de nuestro sistema
+   <a href="fhs.txt">
+    FHS
+   </a>
+  </p>
+  <p>
+   Los puntos de montaje no son más que directorios que creamos para después vincular con alguna de las particiones del disco. La creacióm de estos directorios se realiza con el comando
+   <a href="../glossary/mkdir.txt">
+    mkdir
+   </a>
+   de la misma forma que se haría con cualquier otro directorio.
+  </p>
+  <p>
+   Una vez disponemos del punto de montaje sólo queda vincularlo a la partición que queramos. Para ello tenemos 2 opciones:
+  </p>
+  <ul>
+   <li>
+    Montaje puntual: utilizamos el comando
+    <a href="../glossary/mount.txt">
+     mount
+    </a>
+   </li>
+   <li>
+    Montaje persistente: utilizamos el fichero
+    <a href="../files/fstab.txt">
+     fstab
+    </a>
+   </li>
+  </ul>
+  <hr/>
+  <hr/>
+  <h1>
+   mount
+  </h1>
+  <p>
+   El comando
+   <strong>
+    mount
+   </strong>
+   nos permite poder relacionar una partición de nuestro disco duro con un directorio del árbol
+   <a href="fhs.txt">
+    FHS
+   </a>
+   , llamado punto de montaje. Esto se debe a que en los sistemas GNU/Linux se trabaja con un árbol de directorios lógico, sobre una única raíz (/), lo que hace que todos los dispositivos de almacenamiento (particiones, medios extraíbles, etc) se identifiquen con un directorio de este árbol.
+  </p>
+  <hr/>
+  <h2>
+   Funcionamiento
+  </h2>
+  <p>
+   Para poder utilizar el comando
+   <strong>
+    mount
+   </strong>
+   lo primero que necesitamos es conocer su sintáxis:
+  </p>
+  <pre><code>mount [OPTIONS] DEVICE MOUNT_POINT
+</code></pre>
+  <p>
+   donde:
+   <br/>
+   - DEVICE: nombre de la partición
+   <br/>
+   - MOUNT_POINT: nombre del punto de montaje (directorio)
+  </p>
+  <p>
+   A partir de aquí debemos conocer qué opciones queremos utlizar para el montaje del dispositivo. En el caso de
+   <strong>
+    mount
+   </strong>
+   podemos diferenciar 3 tipos de opciones:
+   <br/>
+   -
+   <a href="#command_line_options">
+    Command Line Options
+   </a>
+   <br/>
+   -
+   <a href="#fs_independent_options">
+    FS Independent Mount Options
+   </a>
+   <br/>
+   -
+   <a href="#fs_dependent_options">
+    FS Dependent Mount Options
+   </a>
+  </p>
+  <p>
+   <a name="command_line_options">
+   </a>
+  </p>
+  <h3>
+   Command Options
+  </h3>
+  <p>
+   Son las opciones que pasamos por línea de comandos que afectan al comportamiento del comando. Algunas de las más comunes son:
+  </p>
+  <ul>
+   <li>
+    -a: monta todos los dispositivos definidos en el fichero
+    <a href="../files/fstab.txt">
+     fstab
+    </a>
+   </li>
+   <li>
+    -F: (combinado con -a) realiza las operaciones de montaje en procesos paralelos.
+   </li>
+   <li>
+    -l: muestra las etiquetas de las particiones del disco que estan montadas
+   </li>
+   <li>
+    -L: monta una partición (que exista en el
+    <a href="../files/fstab.txt">
+     fstab
+    </a>
+    ) utilizando su etiqueta (ver
+    <a href="#ejemplo_1">
+     ejemplo 1
+    </a>
+    )
+   </li>
+   <li>
+    -M: cambia el punto de montaje de un dispositivo en caliente
+   </li>
+   <li>
+    -o: permite aplicar opciones de montaje en un dispositivo (separadas por comas)
+   </li>
+   <li>
+    -O: (combinado con -a) permite indicar que los sistemas de ficheros con las opciones especificadas no se deben montar
+   </li>
+   <li>
+    -t: indica el tipo de sistema de ficheros a instalar
+   </li>
+   <li>
+    -T: permite indicar un fichero fstab distinto
+   </li>
+  </ul>
+  <h4>
+   Montajes vinculados
+  </h4>
+  <p>
+   Además de las ya comentadas, la opción
+   <em>
+    --bind
+   </em>
+   permite el montaje de un punto de montaje sobre otro. De esta manera podemos acceder a la información de un dispositivo desde 2 ubicaciones distintas.
+  </p>
+  <pre><code>$ sudo mount --bind /home/super/public /usr/share/public  
+
+$ ls /home/super/public  
+recursos   materials  apunts  
+
+$ ls /usr/share/public  
+recursos   materials  apunts  
+
+</code></pre>
+  <h4>
+   Dispositivos de loop
+  </h4>
+  <p>
+   Con el comando
+   <strong>
+    mount
+   </strong>
+   también es posible montar un fichero regular como un dispositivo de bloques accesible desde nuestro sistema gracias a la opción
+   <em>
+    loop
+   </em>
+  </p>
+  <pre><code>$ ls /mnt
+
+$ sudo mount -o loop /usr/share/data/isos/debian-11.0.0-amd64-netinst.iso /mnt/
+mount: /mnt: ATENCIÓN: el dispositivo está protegido contra escritura; se monta como sólo lectura.
+
+$ ls /mnt
+autorun.inf  debian  EFI       g2ldr.mbr    isolinux    pool                 README.mirrors.txt  setup.exe
+boot         dists   firmware  install      md5sum.txt  README.html          README.source       tools
+css          doc     g2ldr     install.amd  pics        README.mirrors.html  README.txt          win32-loader.ini
+
+</code></pre>
+  <p>
+   De esta manera el fichero se ha convertido en una partición más de nuestro sistema, de manera que podemos operar con los datos que incorpora. Esta opción de
+   <strong>
+    mount
+   </strong>
+   es equivalente al uso del comando
+   <a href="../glossary/losetup.txt">
+    losetup
+   </a>
+  </p>
+  <p>
+   <a name="fsindependent_options">
+   </a>
+  </p>
+  <h3>
+   FS Independent Mount Options
+  </h3>
+  <p>
+   Estas opciones de montaje son especialmente útiles para configurar el uso de las particiones de forma automatizada en el inicio del sistema.
+  </p>
+  <p>
+   Además, algunas de ellas se encuentran definidas por defecto en el kernel del sistema:
+  </p>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Opciones
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      async/sync
+     </td>
+     <td>
+      Permite especificar cómo se harán las operaciones de E/S de disco
+     </td>
+    </tr>
+    <tr>
+     <td>
+      atime/noatime
+     </td>
+     <td>
+      Define si queremos actualizar o no la marca de tiempo de acceso al fichero
+     </td>
+    </tr>
+    <tr>
+     <td>
+      auto/noauto
+     </td>
+     <td>
+      Indica si se puede montar el dispositivo con la opción -a
+     </td>
+    </tr>
+    <tr>
+     <td>
+      dev/nodev
+     </td>
+     <td>
+      Permite (o no) la posibilidad
+     </td>
+    </tr>
+    <tr>
+     <td>
+      diratime/nodiratime
+     </td>
+     <td>
+      Define si queremos actualizar o no la marca de tiempo de acceso a directorios
+     </td>
+    </tr>
+    <tr>
+     <td>
+      exec/no exec
+     </td>
+     <td>
+      Establece si se pueden ejecutar o no los binarios (o ejecutables) del sistema de ficheros
+     </td>
+    </tr>
+    <tr>
+     <td>
+      owner/group
+     </td>
+     <td>
+      Permite que un usuario pueda montar un dispositivo si es el propietario de él (ver
+      <a href="#ejemplo_2">
+       ejemplo 2
+      </a>
+     </td>
+    </tr>
+    <tr>
+     <td>
+      relatime/norelatime
+     </td>
+     <td>
+      Configura la actualización de las marcas de tiempo mtime i ctime
+     </td>
+    </tr>
+    <tr>
+     <td>
+      remount
+     </td>
+     <td>
+      Permite volver a montar un dispositivo que ya estaba montado
+     </td>
+    </tr>
+    <tr>
+     <td>
+      ro/rw
+     </td>
+     <td>
+      Marca si el sistema de ficheros se monta en lectura o esccritura
+     </td>
+    </tr>
+    <tr>
+     <td>
+      suid/nosuid
+     </td>
+     <td>
+      Especifica si se pueden activar o no los bits SUID o SGID
+     </td>
+    </tr>
+    <tr>
+     <td>
+      user/nouser
+     </td>
+     <td>
+      Permite indicar si un usuario sin privilegios puede montar (o no) un sistema de ficheros que sólo podrá desmontar él
+     </td>
+    </tr>
+    <tr>
+     <td>
+      users
+     </td>
+     <td>
+      Permite indicar que cualquier usuario sin privilegios puede montar un sistema de ficheros y cualquier usuario sin privilegios lo puede desmontar (ver
+      <a href="#ejemplo_2">
+       ejemplo 2
+      </a>
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <p>
+   <a name="fsdependent_options">
+   </a>
+  </p>
+  <h3>
+   FS Dependent Mount Options
+  </h3>
+  <p>
+   En relación a las opciones propias de cada sistema de ficheros, se pueden consultar en el
+   <a href="../glossary/man.txt">
+    man
+   </a>
+   del comando
+   <strong>
+    mount
+   </strong>
+   .
+  </p>
+  <p>
+   De las que hacen referencia a los sistemas
+   <em>
+    ext
+   </em>
+   podemos destacar las siguientes:
+  </p>
+  <table>
+   <thead>
+    <tr>
+     <th>
+      Opciones
+     </th>
+     <th>
+      Descripción
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td>
+      acl/no acl
+     </td>
+     <td>
+      activa el uso de POSIX acl
+     </td>
+    </tr>
+    <tr>
+     <td>
+      commit=
+     </td>
+     <td>
+      frecuencia de sincronización de los metadatos del journal
+     </td>
+    </tr>
+    <tr>
+     <td>
+      data=
+     </td>
+     <td>
+      modo de funcionamiento del journal (data/ordered/writeback)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      errors
+     </td>
+     <td>
+      qué hacer en caso de un error en el montaje del sistema de ficheros (continue/remount-ro/panic)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      usrquota/grpquota
+     </td>
+     <td>
+      activa las utilidades de gestión de cuotas de disco (ver
+      <a href="#ejemplo_3">
+       ejemplo 3
+      </a>
+      )
+     </td>
+    </tr>
+    <tr>
+     <td>
+      nonrecovery/noload
+     </td>
+     <td>
+      no carga el journal durante el montaje (no recomendado)
+     </td>
+    </tr>
+    <tr>
+     <td>
+      user_xattr/nouser_xattr
+     </td>
+     <td>
+      habilita los atributos extendidos para usuarios
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h1>
+   /etc/fstab
+  </h1>
+  <pre><code># /etc/fstab: static file system information.
+# Los campos que se definen en este fichero /etc/fstab son los siguientes:
+#   - file system: dispositivo que hay que montar
+#     - /dev/sdXX
+#     - UUID=...
+#     - LABEL=[LABEL]
+#     - [IP]:[PATH]
+#   - mount point: punto de montaje del dispositivo
+#   - type: sistema de ficheros de la partición
+#   - options: opciones de montaje, separadas por comas
+#   - dump: (0|1) indica si se hace una copia (volcado) del sistema de ficheros antes de iniciarse (deprecated)
+#   - pass: (0|1|2|...) orden de chequeo del sistema de ficheros en el arranque (0 se omite el chequeo)    
+#
+# &lt;file system&gt;                            &lt;mount point&gt;   &lt;type&gt;       &lt;options&gt;         &lt;dump&gt;  &lt;pass&gt;
+UUID=8a0c20cd-005f-49b0-b664-73ad15d1a1e6  /               ext4         errors=remount-ro   0       1
+/dev/sda2                                  /boot           ext4         defaults            0       2
+LABEL=SWAP                                 none            swap         sw                  0       0
+/dev/sr0                                   /media/cdrom0   udf,iso9660  user,noauto         0       0
+192.168.0.1:/srv/nfs                       /opt/export     nfs          defaults            0       0
+</code></pre>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.1/highlight.min.js">
+  </script>
+  <script>
+   hljs.initHighlightingOnLoad();
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   MathJax.Hub.Config({"showProcessingMessages" : false,"messageStyle" : "none","tex2jax": { inlineMath: [ [ "$", "$" ] ] }});
+  </script>
+ </body>
+</html>
